@@ -13,6 +13,7 @@ async function callAPI() {
     const response = await axios.get(finalQuerry);
     useWeatherStore.list = response.data
     return response
+    //salutare
 }
 </script>
 
