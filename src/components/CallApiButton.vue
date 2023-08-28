@@ -5,14 +5,36 @@ import { ref } from 'vue'
 import { weatherStore } from '../stores/weatherStore.js'
 const useWeatherStore = weatherStore()
 
+function modifyDateInStore(){
+    useWeatherStore.list.list.forEach(element => {
+        let workingString = String(element.dt_txt)
+        element.dt_txt = workingString.substr(5)
+        element.dt_txt = element.dt_txt.slice(0, -3)
+    });
+}
+
 async function callAPI() {
     // const querry = "https://api.openweathermap.org/data/2.5/weather?q=Chişineu-Criş&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
-    const querry = "https://api.openweathermap.org/data/2.5/weather?q="
-    const querry2 = "&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
-    const finalQuerry = querry + String(useWeatherStore.cityName) + querry2
-    const response = await axios.get(finalQuerry);
-    useWeatherStore.list = response.data
-    return response
+    const instantTempQuerry1 = "https://api.openweathermap.org/data/2.5/weather?q="
+    const instantTempQuerry2 = "&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
+    const finalInstantQuerry = instantTempQuerry1 +  String(useWeatherStore.cityName) + instantTempQuerry2    
+
+    const forecastQuerry1 = "https://api.openweathermap.org/data/2.5/forecast?q="
+    const forecastqQuerry2 = "&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
+    const finalForecastQuerry = forecastQuerry1 + String(useWeatherStore.cityName) + forecastqQuerry2
+
+    const instantResponse = await axios.get(finalInstantQuerry)
+    const forecastResponse = await axios.get(finalForecastQuerry);
+
+    useWeatherStore.list = forecastResponse.data
+    useWeatherStore.instantTemp = instantResponse.data
+
+    console.log(forecastResponse.data)
+    console.log(instantResponse.data)
+
+    modifyDateInStore() //is here wher I call for the modify function, so I get the new data as soon as posible in the store
+
+    return instantResponse
 }
 </script>
 
