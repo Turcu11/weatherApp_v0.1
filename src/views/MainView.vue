@@ -5,7 +5,7 @@ import CallApiButton from '../components/CallApiButton.vue';
 
 <template>
     <div class="main">
-        <Title msg="Weather App" />
+        <Title msg="Weather App"/>
         <CallApiButton/>
     </div>
 </template>

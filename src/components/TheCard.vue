@@ -1,5 +1,5 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 import ForecastCard from './ForecastCard.vue';
 import { weatherStore } from '../stores/weatherStore.js'
 const useWeatherStore = weatherStore()
@@ -21,19 +21,130 @@ const showForecast = ref(false)
           <h5>Feels like: {{ useWeatherStore.instantTemp.main.feels_like }}&#8451</h5>
           <h5>Humidity: {{ useWeatherStore.instantTemp.main.humidity }}%</h5>
           <h5>Wind speed: {{ useWeatherStore.instantTemp.wind.speed }} km/h</h5>
-          <button v-if="!showForecast" class="mt-5 forecastButton" @click="showForecast = true">See the forecast</button>
-          <button v-if="showForecast" class="mt-5 forecastButton" @click="showForecast = false">Hide the forecast</button>
+          <button v-if="!showForecast" class="forecastButton" @click="showForecast = true">See the forecast</button>
+          <button v-if="showForecast" class="forecastButton" @click="showForecast = false">Hide the forecast</button>
         </div>
       </div>
     </div>
     <div v-if="showForecast">
-      <ForecastCard/>
+      <ForecastCard />
     </div>
   </div>
 </template>
 
 <style lang="scss">
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@media (max-width: 712px) {
+  .position-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 534px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  .forecastButton {
+    font-size: 1rem !important;
+    margin-top: 1.6rem !important;
+  }
+
+  .card {
+    width: 22rem !important;
+    height: 22rem !important;
+  }
+}
+
+@media (max-width: 422px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  .forecastButton {
+    font-size: 0.8rem !important;
+    margin-top: 1.4em !important;
+  }
+
+  .card {
+    width: 20rem !important;
+    height: 20rem !important;
+  }
+}
+
+@media (max-width: 372px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.8rem;
+  }
+
+  .forecastButton {
+    font-size: 0.8rem !important;
+    margin-top: 1.2em !important;
+    width: 10rem !important;
+    height: 1.8rem !important;
+  }
+
+  .card {
+    width: 17rem !important;
+    height: 17rem !important;
+  }
+}
+
+@media (max-width: 285px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.8rem;
+  }
+
+  .forecastButton {
+    font-size: 0.7rem !important;
+    margin-top: 0.8em !important;
+    width: 10rem !important;
+    height: 1.5rem !important;
+  }
+
+  .card {
+    width: 15rem !important;
+    height: 15rem !important;
+  }
+}
+
+
 
 .forecastButton {
   display: flex;
@@ -44,12 +155,14 @@ const showForecast = ref(false)
   font-weight: 700;
   width: 14rem;
   height: 2.5rem;
+  margin-top: 2.5rem;
   background-color: transparent;
   color: white;
   border-radius: 30px;
   border: 2px solid white;
 }
-.forecastButton:hover{
+
+.forecastButton:hover {
   background-color: white;
   color: rgb(0, 189, 126);
 }

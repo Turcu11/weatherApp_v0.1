@@ -5,7 +5,7 @@ import { ref } from 'vue'
 import { weatherStore } from '../stores/weatherStore.js'
 const useWeatherStore = weatherStore()
 
-function modifyDateInStore(){
+function modifyDateInStore() {
     useWeatherStore.list.list.forEach(element => {
         let workingString = String(element.dt_txt)
         element.dt_txt = workingString.substr(5)
@@ -17,7 +17,7 @@ async function callAPI() {
     // const querry = "https://api.openweathermap.org/data/2.5/weather?q=Chişineu-Criş&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
     const instantTempQuerry1 = "https://api.openweathermap.org/data/2.5/weather?q="
     const instantTempQuerry2 = "&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
-    const finalInstantQuerry = instantTempQuerry1 +  String(useWeatherStore.cityName) + instantTempQuerry2    
+    const finalInstantQuerry = instantTempQuerry1 + String(useWeatherStore.cityName) + instantTempQuerry2
 
     const forecastQuerry1 = "https://api.openweathermap.org/data/2.5/forecast?q="
     const forecastqQuerry2 = "&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
@@ -29,9 +29,6 @@ async function callAPI() {
     useWeatherStore.list = forecastResponse.data
     useWeatherStore.instantTemp = instantResponse.data
 
-    console.log(forecastResponse.data)
-    console.log(instantResponse.data)
-
     modifyDateInStore() //is here wher I call for the modify function, so I get the new data as soon as posible in the store
 
     return instantResponse
@@ -40,8 +37,7 @@ async function callAPI() {
 
 <template>
     <div class="inputAndButtons">
-        <input v-model="useWeatherStore.cityName" class="cityInput" type="search" name="city"
-            placeholder="City goes here">
+        <input v-model="useWeatherStore.cityName" class="cityInput" type="search" name="city" placeholder="City goes here">
         <button class="buttonStyle" @click="callAPI">Show the weather</button>
     </div>
     <div v-if="useWeatherStore.list.length != 0">
@@ -50,6 +46,52 @@ async function callAPI() {
 </template>
 
 <style lang="scss">
+@media (max-width: 712px) {
+
+    .buttonStyle,
+    .cityInput {
+        font-size: small !important;
+    }
+}
+
+@media (max-width: 534px) {
+    .cityInput{
+        margin-right: 0.4rem !important;
+    }
+}
+
+@media (max-width: 422px) {
+
+    .buttonStyle,
+    .inputAndButtons,
+    .cityInput {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        font-size: smaller !important;
+        margin-right: 0px !important;
+        margin-top: 1rem !important;
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (max-width: 261px) {
+    .buttonStyle,
+    .inputAndButtons,
+    .cityInput {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        font-size: smaller !important;
+        margin-right: 0px !important;
+        margin-top: 1rem !important;
+        font-size: 0.55rem !important;
+    }
+    
+}
+
 .inputAndButtons {
     display: flex;
 }
