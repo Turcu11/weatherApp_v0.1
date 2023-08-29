@@ -73,10 +73,6 @@ const useWeatherStore = weatherStore()
     background: rgb(32, 134, 100);
 }
 
-hr {
-    margin: 0px !important;
-}
-
 .list{
     display: flex;
     flex-direction: column;

@@ -11,6 +11,7 @@ function modifyDateInStore() {
         element.dt_txt = workingString.substr(5)
         element.dt_txt = element.dt_txt.slice(0, -3)
     });
+    useWeatherStore.list.list = useWeatherStore.list.list.slice(1)
 }
 
 async function callAPI() {
