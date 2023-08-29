@@ -8,13 +8,11 @@ const useWeatherStore = weatherStore()
     <div class="position-center dimension">
         <div class="mx-3 card ">
             <div class="mx-2 mt-3 card-body box">
-                <div v-for="(list, index) in useWeatherStore.list.list" :key="index">
-                    <div v-if="index < 8">
-                        <hr class="mt-1 whiteHR">
+                <div class="detailsForeForcast" v-for="(list, index) in useWeatherStore.list.list" :key="index">
+                    <div class="list">
                         <h6 class="white-text date-text">{{ useWeatherStore.list.list[index].dt_txt }}</h6>
-                        <h5 class="white-text"> {{ useWeatherStore.list.list[index].main.temp
-                        }}&#8451
-                        </h5>
+                        <h5 class="white-text"> {{ useWeatherStore.list.list[index].main.temp }}&#8451</h5>
+                        <hr class="whiteHR">
                     </div>
                 </div>
             </div>
@@ -24,6 +22,36 @@ const useWeatherStore = weatherStore()
 
 <style lang="scss">
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@media (max-width: 534px) {
+    .whiteHR {
+        margin-top: 0.2rem;
+    }
+
+    h5 {
+        font-size: 1rem !important;
+    }
+
+    h6 {
+        font-size: small !important;
+    }
+}
+
+@media (max-width: 422px) {
+    .date-text {
+        margin-top: 0.2rem !important;
+    }
+
+    .box {
+        height: 24rem !important;
+    }
+}
+
+.detailsForeForcast {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 
 ::-webkit-scrollbar {
     width: 0.8rem;
@@ -45,13 +73,26 @@ const useWeatherStore = weatherStore()
     background: rgb(32, 134, 100);
 }
 
+hr {
+    margin: 0px !important;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .whiteHR {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 8rem;
     color: white;
 }
 
 .box {
     text-align: center;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -65,7 +106,7 @@ const useWeatherStore = weatherStore()
 }
 
 .date-text {
-    margin-top: 0.5rem;
+    // margin-top: 0.5rem;
     font-weight: 400;
     opacity: 85%;
 }
@@ -78,4 +119,5 @@ const useWeatherStore = weatherStore()
 .position-center {
     display: flex;
     justify-content: center;
-}</style>
+}
+</style>

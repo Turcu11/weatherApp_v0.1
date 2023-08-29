@@ -17,7 +17,7 @@ const showForecast = ref(false)
           <!-- this is tha instant temperature -->
           <h5>{{ useWeatherStore.instantTemp.weather[0].description }}</h5>
         </h1>
-        <div class="details">
+        <div class="detailsForInstantTemp">
           <h5>Feels like: {{ useWeatherStore.instantTemp.main.feels_like }}&#8451</h5>
           <h5>Humidity: {{ useWeatherStore.instantTemp.main.humidity }}%</h5>
           <h5>Wind speed: {{ useWeatherStore.instantTemp.wind.speed }} km/h</h5>
@@ -185,7 +185,7 @@ const showForecast = ref(false)
   font-weight: 500;
 }
 
-.details {
+.detailsForInstantTemp {
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
