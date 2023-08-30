@@ -1,20 +1,21 @@
 <script setup>
-import Title from '../components/Title.vue';
-import CallApiButton from '../components/CallApiButton.vue';
+import { RouterView } from "vue-router";
+import Footer from '../components/Footer.vue';
 </script>
 
 <template>
     <div class="main">
-        <Title msg="Weather App"/>
-        <CallApiButton/>
+        <RouterView />
+        <Footer />
     </div>
 </template>
 
 <style>
-.main{
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 </style>

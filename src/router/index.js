@@ -5,9 +5,18 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'TheCard',
-      component: () => import('../components/TheCard.vue')
-      
+      name: '',
+      component: () => import('../views/MainLanding.vue')
+    },
+    {
+      path: '/aboutTheAuthor',
+      name: 'aboutTheAuthor',
+      component: () => import('../views/TheAuthor.vue')
+    },
+    {
+      path: '/seeGithub',
+      name: 'seeGithub',
+      component: () => import('../views/SeeGithub.vue')
     }
   ]
 })

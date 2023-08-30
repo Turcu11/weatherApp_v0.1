@@ -1,7 +1,6 @@
 <script setup>
 import axios from 'axios';
 import TheCard from './TheCard.vue';
-import { ref } from 'vue'
 import { weatherStore } from '../stores/weatherStore.js'
 const useWeatherStore = weatherStore()
 
@@ -51,6 +50,7 @@ async function callAPI() {
 </template>
 
 <style lang="scss">
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @media (max-width: 712px) {
 
     .buttonStyle,
