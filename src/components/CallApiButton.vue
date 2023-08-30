@@ -15,6 +15,10 @@ function modifyDateInStore() {
 }
 
 async function callAPI() {
+    if (useWeatherStore.cityName.length == 0) {
+        alert("Fill in the city !!!")
+        return
+    }
     // const querry = "https://api.openweathermap.org/data/2.5/weather?q=Chişineu-Criş&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
     const instantTempQuerry1 = "https://api.openweathermap.org/data/2.5/weather?q="
     const instantTempQuerry2 = "&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
@@ -30,7 +34,7 @@ async function callAPI() {
     useWeatherStore.list = forecastResponse.data
     useWeatherStore.instantTemp = instantResponse.data
 
-    modifyDateInStore() //is here wher I call for the modify function, so I get the new data as soon as posible in the store
+    modifyDateInStore() //is here where I call for the modify function, so I get the new data as soon as posible in the store
 
     return instantResponse
 }
@@ -56,7 +60,7 @@ async function callAPI() {
 }
 
 @media (max-width: 534px) {
-    .cityInput{
+    .cityInput {
         margin-right: 0.4rem !important;
     }
 }
@@ -78,6 +82,7 @@ async function callAPI() {
 }
 
 @media (max-width: 261px) {
+
     .buttonStyle,
     .inputAndButtons,
     .cityInput {
@@ -90,7 +95,7 @@ async function callAPI() {
         margin-top: 1rem !important;
         font-size: 0.55rem !important;
     }
-    
+
 }
 
 .inputAndButtons {
