@@ -117,7 +117,7 @@ async function callAPI() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: hsla(0, 0%, 90%, 1);
     color: black;
     border-radius: 30px;
     border: 2px solid rgb(0, 189, 126);
