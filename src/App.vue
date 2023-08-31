@@ -3,10 +3,9 @@ import MainView from './views/MainView.vue';
 </script>
 
 <template>
-  <div class="main">
-    <MainView/>
-  </div>
-
+    <div class="main">
+      <MainView />
+    </div>
 </template>
 
 <style lang="scss">
@@ -16,7 +15,8 @@ import MainView from './views/MainView.vue';
   justify-content: center;
   align-items: center;
 }
-.title{
+
+.title {
   font-size: larger;
 }
 </style>
