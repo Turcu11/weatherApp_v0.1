@@ -1,13 +1,12 @@
 <script setup>
 import { RouterLink } from "vue-router";
-
 </script>
-
 
 <template>
     <div class="footer-container">
         <div class="footer-logo">
             <Router-link to="/" class="footer-logo-color">
+                <img src="/favicon.png" alt="" srcset="">
                 Weather App
             </Router-link>
         </div>
@@ -45,7 +44,8 @@ import { RouterLink } from "vue-router";
     font-size: large;
     font-weight: 400;
     left: 2rem;
-    .footer-logo-color{
+
+    .footer-logo-color {
         color: rgb(0, 189, 126);
         text-decoration: none;
     }
@@ -59,13 +59,15 @@ import { RouterLink } from "vue-router";
 
     .footer-github-link {
         margin-right: 2rem;
+
         .footer-github-link-style {
             text-decoration: none;
             color: rgb(76, 76, 76);
         }
     }
-    .footer-author{
-        .footer-author-style{
+
+    .footer-author {
+        .footer-author-style {
             text-decoration: none;
             color: rgb(76, 76, 76);
         }
