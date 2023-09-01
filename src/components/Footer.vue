@@ -5,21 +5,21 @@ import { RouterLink } from "vue-router";
 <template>
     <div class="footer-container">
         <div class="footer-logo">
-            <Router-link to="/" class="footer-logo-color">
+            <RouterLink to="/" class="footer-logo-color">
                 <img src="/favicon.png" alt="" srcset="">
                 Weather App
-            </Router-link>
+            </RouterLink>
         </div>
         <div class="footer-links">
             <div class="footer-author">
-                <Router-link to="/aboutTheAuthor" class="footer-author-style">
+                <RouterLink to="/aboutTheAuthor" class="footer-author-style">
                     About the author
-                </Router-link>
+                </RouterLink>
             </div>
             <div class="footer-github-link">
-                <Router-link to="/seeGithub" class="footer-github-link-style">
+                <RouterLink to="/seeGithub" class="footer-github-link-style">
                     See it on GitHub
-                </Router-link>
+                </RouterLink>
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@ import { RouterLink } from "vue-router";
     justify-content: flex-end;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.95);
     height: 3rem;
     width: 100%;
     bottom: 0px;
