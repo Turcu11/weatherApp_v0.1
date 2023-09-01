@@ -121,7 +121,7 @@ async function callAPI() {
     color: black;
     border-radius: 30px;
     border: 2px solid rgb(0, 189, 126);
-    border-color: rgb(0, 189, 126);
+    border-color: linear-gradient(135deg, rgba(17, 150, 161, 1) 0%, rgba(0, 189, 126, 1) 100%);
     margin-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;

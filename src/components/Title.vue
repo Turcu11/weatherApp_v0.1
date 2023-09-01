@@ -31,7 +31,8 @@ defineProps({
   .green {
     font-size: 2.3rem !important;
   }
-  .author{
+
+  .author {
     font-size: 0.85rem;
   }
 }
@@ -40,10 +41,11 @@ defineProps({
   .green {
     font-size: 1.6em !important;
   }
-  .author{
+
+  .author {
     font-size: 0.7rem;
   }
-  
+
 }
 
 .title {
@@ -60,6 +62,10 @@ defineProps({
 
 .green {
   font-size: 5rem;
+  background: rgb(17, 150, 161);
+  background: linear-gradient(135deg, rgba(17, 150, 161, 1) 0%, rgba(0, 189, 126, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
 

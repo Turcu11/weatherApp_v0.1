@@ -9,7 +9,7 @@
             <h1 class="the-author-title">About me</h1>
             <p class="the-author-bio">My name is Iosif, I'm 22 years old, and I'm a student in Oradea. This is my last year
                 at the university. <br> I'm currently studying informatics and economics. When I have some free time, I like
-                to spend it with my wife, going out on bikes, or just staying home and listening to some good music.<br> I'm
+                to spend it with my wife, going out on bikes, or just staying home with her and listening to some good music.<br> I'm
                 very passionate about coding. I really like to develop all kinds of projects and learn new things. I like
                 the challenges and the troubleshooting that's involved in the development of a project.</p>
         </div>
