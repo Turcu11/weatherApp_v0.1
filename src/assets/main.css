@@ -1,6 +1,6 @@
 @import './base.css';
 body{
-  background: url("../../public//background.jpg");
+  background: url("/background.jpg");
   background-repeat: no-repeat;
   background: cover;
   background-size: cover;

@@ -95,12 +95,32 @@
         width: 22rem !important;
         height: 32rem !important;
     }
-    
+
     .the-author-description {
         width: 20rem !important;
         height: 32rem !important;
     }
-    
+
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(38, 217, 157);
+    border-radius: 100vw;
+    margin-block: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(32, 134, 100);
 }
 
 .the-author-container {
@@ -112,7 +132,8 @@
     width: 50rem;
     height: 25rem;
     border-radius: 30px;
-    background-color: rgb(0, 189, 126);
+    background: rgb(17, 150, 161);
+    background: linear-gradient(135deg, rgba(17, 150, 161, 1) 0%, rgba(0, 189, 126, 1) 100%);
 
     .the-author-picture {
         border-radius: 30px;
