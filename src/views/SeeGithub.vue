@@ -10,7 +10,9 @@
                 This project is also avalabile on <span style="font-weight: bolder;">GitHub</span> 
             </h3>
             <p class="see-github-copy-text">There you can see all the code behind, and the file structure if you're intrestead</p>
+            <p class="see-github-copy-text">Also I'm opened for suggestions for improving the app, comments or ideas</p>
         </div>
+        <button class="see-github-button"><a class="see-github-button-text" href="https://github.com/Turcu11/weatherApp_v0.1/tree/master">Go to repo</a></button>
     </div>
 </template>
 
@@ -37,10 +39,12 @@
 
 .see-github-title {
     color: white;
+    margin-bottom: 2rem;
 }
 .see-github-header{
     color: white;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .see-github-copy-text {
@@ -48,4 +52,26 @@
     text-align: center;
     font-size: 1.2rem;
 }
+
+.see-github-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 14rem;
+    height: 2.5rem;
+    margin-top: 2.5rem;
+    background-color: transparent;
+    color: white;
+    border-radius: 30px;
+    border: 2px solid white;
+    .see-github-button-text{
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+  
 </style>
