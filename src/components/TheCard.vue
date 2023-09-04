@@ -14,7 +14,7 @@ const showForecast = ref(false)
         <button class="closeButton" @click="useWeatherStore.clearStore()">x</button>
         <h2 class="card-title mt-4">{{ useWeatherStore.instantTemp.name }}</h2>
         <h1 class="card-subtitle mb-2">{{ useWeatherStore.instantTemp.main.temp }}&#8451
-          <!-- this is tha instant temperature -->
+          <!-- this is the instant temperature -->
           <h5>{{ useWeatherStore.instantTemp.weather[0].description }}</h5>
         </h1>
         <div class="detailsForInstantTemp">
