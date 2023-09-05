@@ -25,8 +25,25 @@ import { RouterLink } from "vue-router";
     </div>
 </template>
 
-
 <style lang="scss">
+@media (max-width: 580px) {
+    .footer-container{
+        height: 5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .footer-links{
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    .footer-logo{
+        position: relative !important;
+        left: 0px !important;
+    }
+}
+
 .footer-container {
     position: fixed;
     display: flex;
