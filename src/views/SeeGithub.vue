@@ -13,8 +13,7 @@
                 intrestead</p>
             <p class="see-github-copy-text">Also I'm opened for suggestions for improving the app, comments or ideas</p>
         </div>
-        <button class="see-github-button"><a class="see-github-button-text"
-                href="https://github.com/Turcu11/weatherApp_v0.1/tree/master">Go to repo</a></button>
+        <a class="see-github-button-text" href="https://github.com/Turcu11/weatherApp_v0.1/tree/master">Go to repo</a>
     </div>
 </template>
 
@@ -56,36 +55,22 @@
     font-size: 1.2rem;
 }
 
-.see-github-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    width: 14rem;
-    height: 2.5rem;
-    margin-top: 2.5rem;
-    background-color: transparent;
-    color: white;
+.see-github-button-text {
+    margin-top: 2rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
     border-radius: 30px;
-    border: 2px solid transparent;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    font-weight: 600;
+}
 
-    .see-github-button-text {
-        padding-top: 0.35rem;
-        padding-bottom: 0.35rem;
-        padding-left: 3.5rem;
-        padding-right: 3.5rem;
-        border-radius: 30px;
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .see-github-button-text:hover {
-        background-color: white;
-        color: rgba(0, 189, 126, 1);
-    }
+.see-github-button-text:hover {
+    background-color: white;
+    color: rgba(0, 189, 126, 1);
 }
 
 ::-webkit-scrollbar {
@@ -106,4 +91,5 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(32, 134, 100);
-}</style>
+}
+</style>
