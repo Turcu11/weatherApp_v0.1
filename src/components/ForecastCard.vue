@@ -6,7 +6,7 @@ const useWeatherStore = weatherStore()
 
 <template>
     <div class="position-center dimension">
-        <div class="mx-3 card ">
+        <div class="mx-3 card">
             <div class="mx-2 mt-3 card-body box">
                 <div class="detailsForeForcast" v-for="(list, index) in useWeatherStore.list.list" :key="index">
                     <div class="list">
@@ -73,7 +73,7 @@ const useWeatherStore = weatherStore()
     background: rgb(32, 134, 100);
 }
 
-.list{
+.list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,4 +116,5 @@ const useWeatherStore = weatherStore()
     display: flex;
     justify-content: center;
 }
+
 </style>

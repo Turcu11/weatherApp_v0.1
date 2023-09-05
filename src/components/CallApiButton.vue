@@ -51,6 +51,7 @@ async function callAPI() {
 
 <style lang="scss">
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
 @media (max-width: 712px) {
 
     .buttonStyle,
@@ -100,6 +101,7 @@ async function callAPI() {
 
 .inputAndButtons {
     display: flex;
+    margin-bottom: 2rem;
 }
 
 .cityInput {
@@ -125,5 +127,4 @@ async function callAPI() {
     margin-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-}
-</style>
+}</style>
