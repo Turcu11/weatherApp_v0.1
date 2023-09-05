@@ -25,6 +25,7 @@
         width: 45rem !important;
     }    
 }
+
 @media (max-width: 816px) {
     .see-github-container{
         width: 38rem !important;
