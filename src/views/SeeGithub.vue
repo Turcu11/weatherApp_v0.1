@@ -23,56 +23,58 @@
 @media (max-width:1024px) {
     .see-github-container {
         width: 45rem !important;
-    }    
+    }
 }
 
 @media (max-width: 816px) {
-    .see-github-container{
+    .see-github-container {
         width: 38rem !important;
         height: auto !important;
     }
-    .see-github-title{
+
+    .see-github-title {
         text-align: center;
     }
 }
 
 @media (max-width: 712px) {
-    .see-github-container{
+    .see-github-container {
         width: 32rem !important;
         height: auto !important;
     }
 }
 
 @media (max-width: 612px) {
-    .see-github-container{
+    .see-github-container {
         width: 26rem !important;
         height: auto !important;
     }
-    
+
 }
 
 @media (max-width: 512px) {
-    .see-github-container{
+    .see-github-container {
         width: 22rem !important;
         height: auto !important;
     }
-    
+
 
 }
+
 @media (max-width:432px) {
-    .see-github-container{
+    .see-github-container {
         width: 18rem !important;
         height: auto !important;
     }
-    
+
 }
 
 @media (max-width:360px) {
-    .see-github-container{
+    .see-github-container {
         width: 16rem !important;
         height: auto !important;
     }
-    
+
 }
 
 .see-github-container {

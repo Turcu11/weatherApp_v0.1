@@ -116,5 +116,4 @@ const useWeatherStore = weatherStore()
     display: flex;
     justify-content: center;
 }
-
 </style>

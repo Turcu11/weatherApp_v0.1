@@ -6,6 +6,11 @@
     flex-direction: column !important;
   }
 }
+@media (max-width: 580px) {
+  .card{
+    margin-bottom: 5rem !important;
+  }
+}
 
 @media (max-width: 534px) {
   h1 {
@@ -167,5 +172,5 @@
   background: rgb(17, 150, 161);
   background: linear-gradient(135deg, rgba(17, 150, 161, 1) 0%, rgba(0, 189, 126, 1) 100%);
   border-radius: 2rem !important;
-  margin-bottom: 3rem !important;
+  margin-bottom: 2rem;
 }
