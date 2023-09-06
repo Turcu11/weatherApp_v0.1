@@ -28,7 +28,7 @@ import { RouterLink } from "vue-router";
 <style lang="scss">
 @media (max-width: 580px) {
     .footer-container {
-        height: 5rem !important;
+        height: 6rem !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
@@ -49,6 +49,7 @@ import { RouterLink } from "vue-router";
     }
     .footer-github-link{
         margin-right: 0px !important;
+        margin-bottom: 0.4rem;
     }
 }
 
