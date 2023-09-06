@@ -83,6 +83,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
+    margin-bottom: 4rem;
     padding: 1.8rem;
     width: 50rem;
     height: 25rem;
