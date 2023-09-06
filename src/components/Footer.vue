@@ -82,6 +82,8 @@ import { RouterLink } from "vue-router";
 
 .footer-links {
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.9rem;
     gap: 2rem;
     text-decoration: none;

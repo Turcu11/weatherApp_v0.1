@@ -99,6 +99,9 @@ const useWeatherStore = weatherStore()
 }
 
 .white-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     margin: 0.1rem;
     color: white;
 }
