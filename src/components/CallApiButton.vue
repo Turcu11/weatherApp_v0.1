@@ -33,7 +33,6 @@ async function callAPI() {
         alert("Fill in the city !!!")
         return
     }
-    // const querry = "https://api.openweathermap.org/data/2.5/weather?q=Chişineu-Criş&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
     const instantTempQuerry1 = "https://api.openweathermap.org/data/2.5/weather?q="
     const instantTempQuerry2 = "&appid=81b34960086bafba355dd2fcf0a023dc&units=metric&rain"
     const finalInstantQuerry = instantTempQuerry1 + String(useWeatherStore.cityName) + instantTempQuerry2
@@ -49,8 +48,8 @@ async function callAPI() {
     useWeatherStore.instantTemp = instantResponse.data
 
     modifyDateInStore() //is here where I call for the modify function, so I get the new data as soon as posible in the store
-    generateIconLinkMainTemp()
-    generateIconLinkForecastTemp()
+    generateIconLinkMainTemp() //here I get the URL for the main icon
+    generateIconLinkForecastTemp() //here I get the URL for the forecast icons
 
     return instantResponse
 }
