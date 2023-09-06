@@ -4,13 +4,13 @@ import { RouterLink } from "vue-router";
 
 <template>
     <div class="footer-container">
-        <div class="footer-logo">
-            <RouterLink to="/" class="footer-logo-color">
-                <img src="/favicon.png" alt="" srcset="">
-                Weather App
-            </RouterLink>
-        </div>
         <div class="footer-links">
+            <div class="footer-logo">
+                <RouterLink to="/" class="footer-logo-color">
+                    <img src="/favicon.png" alt="" srcset="">
+                    Weather App 
+                </RouterLink>
+            </div>
             <div class="footer-author">
                 <RouterLink to="/aboutTheAuthor" class="footer-author-style">
                     About the author
@@ -32,11 +32,14 @@ import { RouterLink } from "vue-router";
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        justify-content: center !important;
     }
 
     .footer-links {
         display: flex !important;
         flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
         gap: 0.5rem !important;
     }
 
@@ -44,12 +47,15 @@ import { RouterLink } from "vue-router";
         position: relative !important;
         left: 0px !important;
     }
+    .footer-github-link{
+        margin-right: 0px !important;
+    }
 }
 
 .footer-container {
     position: fixed;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px;
     background-color: rgba(255, 255, 255, 0.95);
@@ -59,7 +65,9 @@ import { RouterLink } from "vue-router";
 }
 
 .footer-logo {
-    position: inherit;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     font-size: large;
     font-weight: 400;
     left: 2rem;
@@ -67,6 +75,7 @@ import { RouterLink } from "vue-router";
     .footer-logo-color {
         color: rgb(0, 189, 126);
         text-decoration: none;
+        width: 100%;
     }
 }
 
@@ -75,6 +84,7 @@ import { RouterLink } from "vue-router";
     font-size: 0.9rem;
     gap: 2rem;
     text-decoration: none;
+    text-align: center;
 
     .footer-github-link {
         margin-right: 2rem;
