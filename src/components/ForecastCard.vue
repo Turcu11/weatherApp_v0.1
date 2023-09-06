@@ -11,7 +11,9 @@ const useWeatherStore = weatherStore()
                 <div class="detailsForeForcast" v-for="(list, index) in useWeatherStore.list.list" :key="index">
                     <div class="list">
                         <h6 class="white-text date-text">{{ useWeatherStore.list.list[index].dt_txt }}</h6>
-                        <h5 class="white-text"> {{ useWeatherStore.list.list[index].main.temp }}&#8451</h5>
+                        <h5 class="white-text"> {{ useWeatherStore.list.list[index].main.temp }}&#8451
+                            <img :src="useWeatherStore.list.list[index].weather[0].icon" alt="icon">
+                        </h5>
                         <hr class="whiteHR">
                     </div>
                 </div>
