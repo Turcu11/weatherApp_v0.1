@@ -4,7 +4,6 @@ import ForecastCard from './ForecastCard.vue';
 import { weatherStore } from '../stores/weatherStore.js'
 const useWeatherStore = weatherStore()
 const showForecast = ref(false)
-
 </script>
 
 <template>
@@ -15,6 +14,7 @@ const showForecast = ref(false)
         <h2 class="card-title mt-4">{{ useWeatherStore.instantTemp.name }}</h2>
         <h1 class="card-subtitle mb-2">{{ useWeatherStore.instantTemp.main.temp }}&#8451
           <!-- this is the instant temperature -->
+          <img :src="useWeatherStore.iconLink" alt="icon">
           <h5>{{ useWeatherStore.instantTemp.weather[0].description }}</h5>
         </h1>
         <div class="detailsForInstantTemp">

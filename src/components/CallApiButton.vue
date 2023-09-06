@@ -13,6 +13,11 @@ function modifyDateInStore() {
     useWeatherStore.list.list = useWeatherStore.list.list.slice(1)
 }
 
+function generateIconLink() {
+    const iconCode = useWeatherStore.instantTemp.weather[0].icon
+    useWeatherStore.iconLink = "https://openweathermap.org/img/wn/" + String(iconCode) + ".png"
+}
+
 async function callAPI() {
     if (useWeatherStore.cityName.length == 0) {
         alert("Fill in the city !!!")
@@ -34,6 +39,7 @@ async function callAPI() {
     useWeatherStore.instantTemp = instantResponse.data
 
     modifyDateInStore() //is here where I call for the modify function, so I get the new data as soon as posible in the store
+    generateIconLink()
 
     return instantResponse
 }
@@ -127,4 +133,5 @@ async function callAPI() {
     margin-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-}</style>
+}
+</style>

@@ -5,7 +5,8 @@ export const weatherStore = defineStore('weatherList', {
     return {
       list: [],
       instantTemp: [],
-      cityName: ""
+      cityName: "",
+      iconLink: ""
     }
   },
   actions:{
