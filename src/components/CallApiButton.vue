@@ -57,7 +57,7 @@ async function callAPI() {
 
 <template>
     <div class="inputAndButtons">
-        <input v-model="useWeatherStore.cityName" class="cityInput" type="search" name="city" placeholder="City goes here">
+        <input v-model="useWeatherStore.cityName" @keypress.enter="callAPI" class="cityInput" type="search" name="city" placeholder="City goes here">
         <button class="buttonStyle" @click="callAPI">Show the weather</button>
     </div>
     <div v-if="useWeatherStore.list.length != 0">
