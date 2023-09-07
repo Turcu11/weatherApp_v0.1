@@ -141,6 +141,10 @@
   color: white !important;
 }
 
+.country-code{
+  opacity: 0.8;
+}
+
 .closeButton {
   position: absolute !important;
   right: 1rem !important;
@@ -155,7 +159,7 @@
 .detailsForInstantTemp {
   display: flex !important;
   flex-direction: column !important;
-  margin-top: 1.5rem !important;
+  margin-top: 1rem !important;
   align-items: center !important;
   color: white !important;
 }

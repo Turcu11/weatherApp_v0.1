@@ -50,14 +50,15 @@ async function callAPI() {
     modifyDateInStore() //is here where I call for the modify function, so I get the new data as soon as posible in the store
     generateIconLinkMainTemp() //here I get the URL for the main icon
     generateIconLinkForecastTemp() //here I get the URL for the forecast icons
-
+    
     return instantResponse
 }
 </script>
 
 <template>
     <div class="inputAndButtons">
-        <input v-model="useWeatherStore.cityName" @keypress.enter="callAPI" class="cityInput" type="search" name="city" placeholder="City goes here">
+        <input v-model="useWeatherStore.cityName" @keypress.enter="callAPI" class="cityInput" type="search" name="city"
+            placeholder="City goes here">
         <button class="buttonStyle" @click="callAPI">Show the weather</button>
     </div>
     <div v-if="useWeatherStore.list.length != 0">

@@ -14,6 +14,7 @@ export const weatherStore = defineStore('weatherList', {
       this.list = []
       this.instantTemp = []
       this.cityName = ""
+      this.iconLink = ""
     }
   }
 })
