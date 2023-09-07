@@ -94,7 +94,7 @@ const useWeatherStore = weatherStore()
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 22rem;
+    height: 25rem;
     overflow: auto;
 }
 
