@@ -1,4 +1,5 @@
 <script setup>
+import {ref} from 'vue'
 import { weatherStore } from '../stores/weatherStore';
 const useWeatherStore = weatherStore()
 
@@ -11,7 +12,6 @@ const useWeatherStore = weatherStore()
                 <div class="detailsForeForcast" v-for="(list, index) in useWeatherStore.list.list" :key="index">
                     <div class="list">
                         <h6 class="white-text date-text">{{ useWeatherStore.list.list[index].dt_txt }}
-                            <button class="see-more-button">+</button>
                         </h6>
                         <h5 class="white-text"> {{ useWeatherStore.list.list[index].main.temp }}&#8451
                             <img :src="useWeatherStore.list.list[index].weather[0].icon" alt="icon">
@@ -75,21 +75,6 @@ const useWeatherStore = weatherStore()
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(32, 134, 100);
-}
-
-.see-more-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0.3rem;
-    background-color: transparent;
-    border: none;
-    color: white;
-}
-.see-more-button:hover{
-    border-radius: 10px;
-    background-color: white;
-    color: rgb(0, 189, 126);
 }
 
 .list {
