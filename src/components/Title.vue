@@ -9,8 +9,8 @@ defineProps({
 
 <template>
   <div class="title">
-    <h1 class="green">{{ msg }} <h6 class="title-beta">beta v0.1</h6></h1>
-    <!-- <h6 class="author">by Turcu</h6> -->
+    <h1 class="green">{{ msg }}</h1>
+    <h6 class="version">beta v0.1</h6>
   </div>
 </template>
 
@@ -32,7 +32,7 @@ defineProps({
     font-size: 2.3rem !important;
   }
 
-  .author {
+  .version {
     font-size: 0.85rem;
   }
 }
@@ -42,7 +42,7 @@ defineProps({
     font-size: 1.6em !important;
   }
 
-  .author {
+  .version {
     font-size: 0.7rem;
   }
 
@@ -53,12 +53,9 @@ defineProps({
   flex-direction: column;
   text-align: right;
 
-  .title-beta {
-    margin-top: 0.5rem;
-  }
 }
 
-.author {
+.version {
   display: flex;
   flex-direction: column;
   text-align: right;
