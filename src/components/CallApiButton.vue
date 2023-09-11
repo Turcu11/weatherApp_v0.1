@@ -2,6 +2,7 @@
 import axios from 'axios';
 import TheCard from './TheCard.vue';
 import { weatherStore } from '../stores/weatherStore.js'
+import { RouterLink } from "vue-router";
 const useWeatherStore = weatherStore()
 
 function modifyDateInStore() {
@@ -60,7 +61,9 @@ async function callAPI() {
         <input v-model="useWeatherStore.cityName" @keypress.enter="callAPI" class="cityInput" type="search" name="city"
             placeholder="City goes here">
         <button class="buttonStyle" @click="callAPI">Show the weather</button>
-        <button class="help-button">?</button>
+        <RouterLink to="/help">
+            <button class="help-button" @click="useWeatherStore.showHelpScreen = true">?</button>
+        </RouterLink>
     </div>
     <div v-if="useWeatherStore.list.length != 0">
         <TheCard />
@@ -123,7 +126,7 @@ async function callAPI() {
 }
 
 .help-button {
-    background-color: transparent;
+    background-color: hsla(0, 0%, 90%, 1);
     border-radius: 50px;
     border: 2px solid rgb(0, 189, 126);
     margin-left: 1.2rem;

@@ -17,6 +17,11 @@ const router = createRouter({
       path: '/seeGithub',
       name: 'seeGithub',
       component: () => import('../views/SeeGithub.vue')
+    },
+    {
+      path: '/help',
+      name: 'help',
+      component: () => import('../views/HelpView.vue')
     }
   ]
 })
