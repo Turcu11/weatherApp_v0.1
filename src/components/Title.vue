@@ -9,8 +9,8 @@ defineProps({
 
 <template>
   <div class="title">
-    <h1 class="green">{{ msg }}</h1>
-    <h6 class="author">by Turcu</h6>
+    <h1 class="green">{{ msg }} <h6 class="title-beta">beta v0.1</h6></h1>
+    <!-- <h6 class="author">by Turcu</h6> -->
   </div>
 </template>
 
@@ -52,6 +52,10 @@ defineProps({
   display: flex;
   flex-direction: column;
   text-align: right;
+
+  .title-beta {
+    margin-top: 0.5rem;
+  }
 }
 
 .author {
