@@ -22,16 +22,53 @@ import { RouterLink } from "vue-router";
 </template>
 
 <style lang="scss">
+
+@media (max-width: 1024px) {
+    .help-container{
+        width: 45rem !important;
+    }
+}
+
+@media (max-width: 816px) {
+    .help-container{
+        width: 36rem !important;
+    }
+}
+
+@media (max-width: 712px) {
+    .help-container{
+        width: 32rem !important;
+    }
+}
+
+@media (max-width: 612px) {
+    .help-container{
+        width: 26rem !important;
+    }
+}
+
+@media (max-width: 512px) {
+    .help-container{
+        width: 22rem !important;
+    }
+}
+
+@media (max-width: 432px) {
+    .help-container{
+        width: 18rem !important;
+    }
+}
+
 .help-container {
     height: 25rem;
-    width: 40rem;
+    width: 50rem;
     margin-top: 4rem;
+    margin-bottom: 4rem;
     background: rgb(17, 150, 161);
     background: linear-gradient(135deg, rgba(17, 150, 161, 1) 0%, rgba(0, 189, 126, 1) 100%);
     border-radius: 2rem;
     color: white;
     overflow: auto;
-    z-index: 1;
 }
 
 .help-close-button{
