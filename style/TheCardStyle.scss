@@ -6,8 +6,9 @@
     flex-direction: column !important;
   }
 }
+
 @media (max-width: 580px) {
-  .card{
+  .card {
     margin-bottom: 5rem !important;
   }
 }
@@ -141,7 +142,7 @@
   color: white !important;
 }
 
-.country-code{
+.country-code {
   opacity: 0.8;
 }
 
@@ -152,8 +153,15 @@
   border: none !important;
   color: white !important;
   font-size: 1.5rem !important;
-  text-align: left !important;
+  text-align: center !important;
   font-weight: 500 !important;
+  padding-bottom: 0.35rem;
+}
+
+.closeButton:hover {
+  background-color: white !important;
+  color: rgba(0, 189, 126, 1) !important;
+  border-radius: 30px !important;
 }
 
 .detailsForInstantTemp {
