@@ -5,7 +5,7 @@ import { RouterLink } from "vue-router";
 <template>
     <div class="help-container">
         <div class="help-close-button">
-            <RouterLink to="/"><button class="help-close-button-style"> X </button></RouterLink>
+            <RouterLink to="/"><button class="help-close-button-style"> x </button></RouterLink>
         </div>
         <div class="help-title">
             <h3>Help</h3>
@@ -89,6 +89,11 @@ import { RouterLink } from "vue-router";
         font-size: large;
         border: none;
         background-color: transparent;
+    }
+    .help-close-button-style:hover{
+        background-color: white;
+        color: rgba(0, 189, 126, 1);
+        border-radius: 30px;
     }
 }
 
