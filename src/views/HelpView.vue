@@ -11,7 +11,7 @@ import { RouterLink } from "vue-router";
             <h3>Help</h3>
         </div>
         <div class="help-main-content">
-            <p>This app is still in <span style="font-weight: bolder;">BETA</span></p>
+            <h5>This app is still in <span style="font-weight: bolder;">BETA</span></h5>
             <p>It's pretty simple to use the app, just type in the city you want to see the weather <br> for and click "Show the weather"</p>
             <p>If you want to see the forecast for the next 5 days, in steps of 3 hours, after you found the city click the "See the forecast" button on the bottom of the card</p>
             <p>Some cityes will not appear, for example "București" does <span style="font-weight: bolder;">not</span> work,
